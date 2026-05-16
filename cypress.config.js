@@ -4,6 +4,14 @@ import dotenv from "dotenv";
 dotenv.config();
 
 export default defineConfig({
+  reporter: 'mochawesome',
+
+  reporterOptions: {
+    reportDir: 'cypress/reports',
+    overwrite: false,
+    html: true,
+    json: true
+  },
 
   e2e: {
     baseUrl: "https://practicesoftwaretesting.com",
